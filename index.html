@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico R-07 | Laboratorio de Robótica</title>
+<meta name="description" content="Objeto de Aprendizaje gamificado sobre las partes de un robot: sensores, actuadores y controlador.">
+<link rel="icon" type="image/jpeg" href="imagenes/icono-sensor.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="cabecera">
+  <p>Laboratorio de Robótica</p>
+  <nav>
+    <a href="#contenido">Expediente técnico</a>
+    <a href="#actividades">Protocolo de diagnóstico</a>
+  </nav>
+  <p id="estado-progreso">DIAGNÓSTICO: 0/2</p>
+  <div id="barra-progreso">
+    <div id="barra-progreso-relleno"></div>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio">
+    <p>MISIÓN · MÓDULO 1</p>
+    <h1>Diagnóstico del robot R-07</h1>
+    <p>El robot R-07 dejó de responder en medio de una prueba. Tu misión, como técnico/a de campo, es revisar sus tres sistemas, percepción, decisión y acción, para encontrar qué falló.</p>
+
+    <pre>Conectando con R-07...
+[AVISO] El robot no reacciona a estímulos. Diagnóstico requerido.
+Cargando expediente técnico de sus tres sistemas...
+Listo, agente. Empezá por entender cómo funciona cada parte.</pre>
+
+    <p><strong>Objetivo:</strong> al terminar esta misión, vas a poder identificar sensores, actuadores y el controlador de un robot, y explicar cómo se relacionan entre sí para resolver una falla.</p>
+
+    <ol id="diagrama-flujo">
+      <li class="paso-diagrama">
+        <img src="imagenes/icono-sensor.jpg" alt="Ícono de sensor" width="100">
+        <h3>Sensor</h3>
+      </li>
+      <li class="paso-diagrama">
+        <img src="imagenes/icono-controlador.jpg" alt="Ícono de controlador" width="100">
+        <h3>Controlador</h3>
+      </li>
+      <li class="paso-diagrama">
+        <img src="imagenes/icono-actuador.jpg" alt="Ícono de actuador" width="100">
+        <h3>Actuador</h3>
+      </li>
+    </ol>
+  </section>
+
+  <section id="contenido">
+    <p>01, EXPEDIENTE TÉCNICO</p>
+    <h2>Los tres sistemas de R-07</h2>
+    <p>Un robot es una máquina. Puede sentir lo que pasa a su alrededor, puede moverse o hacer una acción, y tiene un programa que le dice qué hacer. Revisá cada sistema a continuación.</p>
+
+    <article class="sistema" id="sistema-sensores">
+      <h3>Sistema de percepción: los sensores</h3>
+      <p>Un sensor es una pieza que capta información. El sensor mide algo del ambiente. Por ejemplo: la luz, la distancia o el color.</p>
+      <ul>
+        <li class="ejemplo"><strong>Sensor de distancia.</strong> Mide qué tan cerca está un objeto.</li>
+        <li class="ejemplo"><strong>Sensor de luz.</strong> Mide si hay luz o sombra.</li>
+        <li class="ejemplo"><strong>Sensor de color.</strong> Reconoce colores como negro o blanco.</li>
+      </ul>
+      <figure>
+        <img src="imagenes/sensor-ultrasonico.jpg" alt="Sensor ultrasónico del Laboratorio de Robótica" width="400">
+        <figcaption>Sensor ultrasónico usado en el Laboratorio</figcaption>
+      </figure>
+    </article>
+
+    <article class="sistema" id="sistema-actuadores">
+      <h3>Sistema de acción: los actuadores</h3>
+      <p>Un actuador es una pieza que produce un movimiento o una acción. El actuador recibe una orden. El actuador cumple esa orden.</p>
+      <ul>
+        <li class="ejemplo"><strong>Motor.</strong> Hace que el robot se mueva.</li>
+        <li class="ejemplo"><strong>Led.</strong> Enciende una luz.</li>
+        <li class="ejemplo"><strong>Parlante.</strong> Emite un sonido.</li>
+      </ul>
+      <figure>
+        <img src="imagenes/motor-dc.jpg" alt="Motor DC o servomotor" width="400">
+        <figcaption>Motor DC / servomotor usado en el Laboratorio</figcaption>
+      </figure>
+    </article>
+
+    <article class="sistema" id="sistema-controlador">
+      <h3>Sistema de decisión: el controlador</h3>
+      <p>El controlador es el cerebro del robot. Recibe la información de los sensores, decide qué hacer y manda la orden a los actuadores.</p>
+      <p>El controlador tiene un programa. El programa dice, paso a paso, qué debe hacer el robot en cada situación.</p>
+    </article>
+
+    <article class="sistema" id="sistema-juntos">
+      <h3>Reconstrucción: los tres trabajan juntos</h3>
+      <ol>
+        <li>El sensor capta información.</li>
+        <li>El controlador recibe esa información y decide.</li>
+        <li>El actuador ejecuta la acción.</li>
+      </ol>
+      <p>Ejemplo: un sensor de distancia detecta un obstáculo. El controlador decide frenar. El motor (actuador) frena el robot.</p>
+      <figure>
+        <video controls width="480">
+          <source src="videos/robot-esquivando-obstaculos.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+        <figcaption>Video: robot esquivando un obstáculo</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section id="actividades">
+    <p>02, PROTOCOLO DE DIAGNÓSTICO</p>
+    <h2>Encontrá la falla</h2>
+    <p id="mensaje-logro">Completá los dos chequeos para cerrar el expediente</p>
+
+    <article class="chequeo" id="chequeo-1">
+      <h3>Chequeo 1 · Identificación</h3>
+      <form>
+        <fieldset>
+          <legend>¿Cuál de estas piezas es un sensor?</legend>
+          <ul class="opciones">
+            <li><label><input type="radio" name="act1" value="motor"> Motor</label></li>
+            <li><label><input type="radio" name="act1" value="sensor"> Sensor de distancia</label></li>
+            <li><label><input type="radio" name="act1" value="led"> Led</label></li>
+            <li><label><input type="radio" name="act1" value="parlante"> Parlante</label></li>
+          </ul>
+        </fieldset>
+        <button type="button">Ejecutar chequeo</button>
+      </form>
+      <p>resultado: <span id="resultado-1"></span></p>
+    </article>
+
+    <article class="chequeo bloqueada" id="chequeo-2">
+      <h3>Chequeo 2 · Núcleo de decisión</h3>
+      <p>Resolvé el chequeo 1 para desbloquear este sector del expediente.</p>
+      <form>
+        <fieldset>
+          <legend>Completá la frase con la palabra correcta</legend>
+          <p><label>El <input type="text" id="respuesta-controlador" name="respuesta" placeholder="escribí acá" disabled> es el cerebro del robot. Recibe información de los sensores y decide qué hacer.</label></p>
+        </fieldset>
+        <button type="button" disabled>Ejecutar chequeo</button>
+      </form>
+      <p>resultado: <span id="resultado-2"></span></p>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <p>Objeto de Aprendizaje · Diseño Web</p>
+</footer>
+
+<!-- Informe final: se muestra/oculta con JavaScript más adelante -->
+<div id="informe-final">
+  <div id="tarjeta-informe">
+    <h2>R-07 operativo</h2>
+    <p>Diagnosticaste los tres sistemas del robot y R-07 volvió a responder. Insignia de técnico/a de robótica desbloqueada.</p>
+    <p id="clave-verificacion">CLAVE: NUCLEO-ESTABLE</p>
+    <p>Reportá esta clave a tu docente (por ejemplo en Schoology) como evidencia de que completaste el diagnóstico.</p>
+    <button type="button" id="boton-cerrar-informe">Cerrar</button>
+  </div>
+</div>
+
+</body>
+</html>
